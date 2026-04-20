@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./styles/App.css";
 import Header from "./components/layout/Header/Header";
+import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -39,7 +40,7 @@ function App() {
       <Header />
 
       <div className="container">
-        <aside className="pagePanel">aside</aside>
+        <PatientsPanel />
 
         <main className="pagePanel">
           <section className="pagePanel">section 1</section>

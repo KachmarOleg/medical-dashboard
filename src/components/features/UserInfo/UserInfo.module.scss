@@ -1,15 +1,22 @@
+.userItem {
+  padding: 16px 18px;
+
+  &.is_active {
+    background-color: #d8fcf7;
+  }
+}
+
 .userInfo {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 8px;
-  border-right: 1px solid #f0f0f0;
+  column-gap: 12px;
   padding-right: 12px;
-  margin-right: 12px;
 
   figcaption {
     display: flex;
     flex-direction: column;
+    row-gap: 4px;
   }
 }
 

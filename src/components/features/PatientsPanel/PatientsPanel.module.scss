@@ -1,0 +1,16 @@
+.patientsPanel {
+  padding: 0;
+}
+
+.patientsHeader {
+  padding: 20px;
+}
+
+.patientsList {
+  max-height: calc(100vh - 213px);
+  overflow: auto;
+
+  a {
+    text-decoration: none;
+  }
+}

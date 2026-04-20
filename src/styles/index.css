@@ -89,6 +89,12 @@ figure {
   align-items: center;
 }
 
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* 
 * {
   margin: 0;
