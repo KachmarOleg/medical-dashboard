@@ -37,6 +37,17 @@ function App() {
   return (
     <>
       <Header />
+
+      <div className="container">
+        <aside className="pagePanel">aside</aside>
+
+        <main className="pagePanel">
+          <section className="pagePanel">section 1</section>
+          <section className="pagePanel">section 2</section>
+        </main>
+
+        <aside className="pagePanel">aside 2</aside>
+      </div>
     </>
   );
 }

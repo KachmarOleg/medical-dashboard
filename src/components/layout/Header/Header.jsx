@@ -7,23 +7,27 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 export default function Header() {
   return (
-    <header className={classes.header}>
-      <figure>
-        <img
-          src="/images/TestLogo.svg"
-          alt="Company logo"
-          width={210}
-          height={48}
-        />
-      </figure>
+    <header>
+      <div className={`${classes.headerContainer} container`}>
+        <a href="/">
+          <figure>
+            <img
+              src="/images/TestLogo.svg"
+              alt="Company logo"
+              width={210}
+              height={48}
+            />
+          </figure>
+        </a>
 
-      <MainMenu />
-      <ProfileInfo
-        userPic="/images/doctor.png"
-        userPic2x="/images/doctor2x.png"
-        name="Dr. Jose Simmons"
-        subtitle="General Practitioner"
-      />
+        <MainMenu />
+        <ProfileInfo
+          userPic="/images/doctor.png"
+          userPic2x="/images/doctor2x.png"
+          name="Dr. Jose Simmons"
+          subtitle="General Practitioner"
+        />
+      </div>
     </header>
   );
 }

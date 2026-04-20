@@ -5,7 +5,7 @@ export default function MainMenu() {
     <nav className={classes.mainMenu}>
       <ul className={`${classes.mainMenuList} flex_center`}>
         <li>
-          <a href="">
+          <a href="#">
             <figure>
               <img
                 src="/images/home.svg"
@@ -18,7 +18,7 @@ export default function MainMenu() {
           </a>
         </li>
         <li>
-          <a href="" className={classes.is_active}>
+          <a href="#" className={classes.is_active}>
             <figure>
               <img
                 src="/images/group.svg"
@@ -31,7 +31,7 @@ export default function MainMenu() {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#">
             <figure>
               <img
                 src="/images/calendar.svg"
@@ -44,7 +44,7 @@ export default function MainMenu() {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#">
             <figure>
               <img
                 src="/images/credit-card.svg"
@@ -57,7 +57,7 @@ export default function MainMenu() {
           </a>
         </li>
         <li>
-          <a href="">
+          <a href="#">
             <figure>
               <img
                 src="/images/chat.svg"
