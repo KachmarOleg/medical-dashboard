@@ -1,0 +1,32 @@
+.mainMenu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mainMenuList {
+  column-gap: 40px;
+
+  li {
+    list-style: none;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 9px;
+      font-size: 14px;
+      line-height: 19px;
+      color: #072635;
+      &.is_active {
+        padding: 11px 16px;
+        background-color: #01f0d0;
+        border-radius: 41px;
+      }
+
+      figure {
+        display: flex;
+      }
+    }
+  }
+}

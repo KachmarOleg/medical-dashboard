@@ -1,0 +1,34 @@
+.profileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.userInfo {
+  column-gap: 8px;
+  border-right: 1px solid #f0f0f0;
+  padding-right: 12px;
+  margin-right: 12px;
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.userName {
+  color: #072635;
+}
+
+.userSubtitle {
+  color: #707070;
+}
+
+.userName,
+.userSubtitle {
+  line-height: 19px;
+}
+
+.moreVertical {
+  margin-left: 12px;
+}

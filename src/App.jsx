@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./styles/App.css";
+import Header from "./components/layout/Header/Header";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -35,14 +36,7 @@ function App() {
 
   return (
     <>
-      <button>Click</button>
-      <ul>
-        {JesTeylorData.map((item) => (
-          <li style={item.completed ? { color: "green" } : { color: "red" }}>
-            : {item.title}
-          </li>
-        ))}
-      </ul>
+      <Header />
     </>
   );
 }
