@@ -20,6 +20,24 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e3e4e6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #072635;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #051a44;
+}
+
 body {
   padding: 18px;
   margin: 0;

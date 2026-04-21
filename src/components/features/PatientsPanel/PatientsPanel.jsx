@@ -8,7 +8,7 @@ export default function PatientsPanel({
   setActivePatient,
 }) {
   return (
-    <aside className={`${classes.patientsPanel} pagePanel`}>
+    <aside className={`${classes.patientsPanel}`}>
       <div className={`${classes.patientsHeader} flex_between`}>
         <h2>Patients</h2>
         <figure>
