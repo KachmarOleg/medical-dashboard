@@ -54,7 +54,7 @@ export default function PatientsPanel() {
             <UserInfo
               userPic={patient.profile_picture}
               name={patient.name}
-              subtitle={patient.age}
+              subtitle={`${patient.gender}, ${patient.age}`}
               is_active={patient.name === "Jessica Taylor" ? true : false}
             />
           </a>
