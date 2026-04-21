@@ -24,12 +24,11 @@ function App() {
       );
       const patientsJSON = await patientsResponse.json();
       setPatients(patientsJSON);
+      console.log(patientsJSON);
     }
 
     getPatients();
   }, []);
-
-  console.log(patients);
 
   function handlePatientClick(patientName) {
     setActivePatient(patients.find((patient) => patient.name === patientName));
