@@ -4,6 +4,7 @@ import Header from "./components/layout/Header/Header";
 import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 import PatientCard from "./components/features/PatientCard/PatientCard";
 import LabResults from "./components/features/LabResults/LabResults";
+import DiagnosticList from "./components/features/DiagnosticList/DiagnosticList";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -46,9 +47,9 @@ function App() {
           setActivePatient={handlePatientClick}
         />
 
-        <main className="pagePanel">
+        <main>
           <section className="pagePanel">section 1</section>
-          <section className="pagePanel">section 2</section>
+          <DiagnosticList activePatient={activePatient} />
         </main>
 
         <aside>
