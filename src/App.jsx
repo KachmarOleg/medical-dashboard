@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import "./styles/App.css";
 import Header from "./components/layout/Header/Header";
 import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
+import PatientCard from "./components/features/PatientCard/PatientCard";
 
 function App() {
   const [patients, setPatients] = useState([]);
+  const [activePatient, setActivePatient] = useState({});
 
   let username = "coalition";
   let password = "skills-test";
@@ -27,27 +29,43 @@ function App() {
     getPatients();
   }, []);
 
-  // console.log(patients);
+  console.log(patients);
 
-  const JesTeylorData = patients.filter(
-    (patient) => patient.name === "Jessica Taylor",
-  );
+  // const JesTeylorData = patients.filter(
+  //   (patient) => patient.name === "Jessica Taylor",
+  // );
 
-  console.log(JesTeylorData);
+  // console.log(JesTeylorData);
+
+  // const patient =
+  // setActivePatient(
+  //   patients.find((patient) => patient.name === "Jessica Taylor"),
+  // );
+
+  function handlePatientClick(patientName) {
+    setActivePatient(patients.find((patient) => patient.name === patientName));
+  }
 
   return (
     <>
       <Header />
 
       <div className="container">
-        <PatientsPanel />
+        <PatientsPanel
+          patients={patients}
+          activePatient={activePatient}
+          setActivePatient={handlePatientClick}
+        />
 
         <main className="pagePanel">
           <section className="pagePanel">section 1</section>
           <section className="pagePanel">section 2</section>
         </main>
 
-        <aside className="pagePanel">aside 2</aside>
+        <aside>
+          <PatientCard activePatient={activePatient} />
+          <div className="pagePanel"></div>
+        </aside>
       </div>
     </>
   );
