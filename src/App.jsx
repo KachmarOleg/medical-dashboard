@@ -6,7 +6,7 @@ import PatientCard from "./components/features/PatientCard/PatientCard";
 
 function App() {
   const [patients, setPatients] = useState([]);
-  const [activePatient, setActivePatient] = useState({});
+  const [activePatient, setActivePatient] = useState(false);
 
   let username = "coalition";
   let password = "skills-test";
@@ -30,17 +30,6 @@ function App() {
   }, []);
 
   console.log(patients);
-
-  // const JesTeylorData = patients.filter(
-  //   (patient) => patient.name === "Jessica Taylor",
-  // );
-
-  // console.log(JesTeylorData);
-
-  // const patient =
-  // setActivePatient(
-  //   patients.find((patient) => patient.name === "Jessica Taylor"),
-  // );
 
   function handlePatientClick(patientName) {
     setActivePatient(patients.find((patient) => patient.name === patientName));

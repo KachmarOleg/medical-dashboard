@@ -88,6 +88,20 @@ figure {
   align-items: center;
 }
 
+.flex_column {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.flex_column_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .flex_between {
   display: flex;
   justify-content: space-between;
