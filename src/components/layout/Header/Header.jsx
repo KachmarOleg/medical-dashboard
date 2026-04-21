@@ -23,7 +23,6 @@ export default function Header() {
         <MainMenu />
         <ProfileInfo
           userPic="/images/doctor.png"
-          userPic2x="/images/doctor2x.png"
           name="Dr. Jose Simmons"
           subtitle="General Practitioner"
         />

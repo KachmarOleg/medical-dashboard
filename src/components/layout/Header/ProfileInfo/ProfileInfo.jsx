@@ -1,12 +1,12 @@
 import Avatar from "../../../ui/Avatar/Avatar";
 import classes from "./ProfileInfo.module.scss";
 
-export default function ProfileInfo({ userPic, userPic2x, name, subtitle }) {
+export default function ProfileInfo({ userPic, name, subtitle }) {
   return (
     <div className={classes.profileInfo}>
       <button className="flex_center">
         <figure className={classes.userInfo}>
-          <Avatar imgSrc={userPic} imgSrc2x={userPic2x} />
+          <Avatar imgSrc={userPic} />
 
           <figcaption>
             <span className={classes.userName}>{name}</span>
