@@ -1,6 +1,5 @@
 import MainMenu from "./MainMenu/MainMenu";
 import classes from "./Header.module.scss";
-import UserInfo from "../../features/UserInfo/UserInfo";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 // import UserItem from "../../ui/userItem/UserItem";
