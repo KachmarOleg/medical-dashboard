@@ -1,0 +1,18 @@
+.labResultsContainer {
+  margin-top: 16px;
+  max-height: 20vh;
+  overflow: auto;
+}
+
+.labResult {
+  padding: 10px 20px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #f6f7f8;
+  }
+}
+
+.labResultText {
+  color: #072635;
+}

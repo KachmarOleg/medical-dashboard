@@ -3,6 +3,7 @@ import "./styles/App.css";
 import Header from "./components/layout/Header/Header";
 import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 import PatientCard from "./components/features/PatientCard/PatientCard";
+import LabResults from "./components/features/LabResults/LabResults";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -52,7 +53,7 @@ function App() {
 
         <aside>
           <PatientCard activePatient={activePatient} />
-          <div className="pagePanel"></div>
+          <LabResults activePatient={activePatient} />
         </aside>
       </div>
     </>
