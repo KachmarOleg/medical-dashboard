@@ -126,6 +126,14 @@ figure {
   align-items: center;
 }
 
+.gap8 {
+  gap: 8px;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
 /* 
 * {
   margin: 0;

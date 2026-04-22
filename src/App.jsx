@@ -5,6 +5,7 @@ import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 import PatientCard from "./components/features/PatientCard/PatientCard";
 import LabResults from "./components/features/LabResults/LabResults";
 import DiagnosticList from "./components/features/DiagnosticList/DiagnosticList";
+import VitalCard from "./components/features/VitalCard/VitalCard";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -48,7 +49,34 @@ function App() {
         />
 
         <main>
-          <section className="pagePanel">section 1</section>
+          <section className="pagePanel">
+            <h2>Diagnosis History</h2>
+            <div style={{ margin: "40px 0 20px" }}></div>
+            <div className="flex_between gap20">
+              <VitalCard
+                activePatient={activePatient}
+                type="respiratory_rate"
+                cardColor="#E0F3FA"
+                vitalUnit="bpm"
+                icon="/images/respiratory-rate.svg"
+              />
+              <VitalCard
+                activePatient={activePatient}
+                type="temperature"
+                cardColor="#FFE6E9"
+                vitalUnit="°F"
+                icon="/images/temperature.svg"
+              />
+              <VitalCard
+                activePatient={activePatient}
+                type="heart_rate"
+                cardColor="#FFE6F1"
+                vitalUnit="bpm"
+                icon="/images/heart-rate.svg"
+              />
+            </div>
+          </section>
+
           <DiagnosticList activePatient={activePatient} />
         </main>
 
