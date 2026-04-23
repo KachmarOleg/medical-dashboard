@@ -6,6 +6,7 @@ import PatientCard from "./components/features/PatientCard/PatientCard";
 import LabResults from "./components/features/LabResults/LabResults";
 import DiagnosticList from "./components/features/DiagnosticList/DiagnosticList";
 import VitalCard from "./components/features/VitalCard/VitalCard";
+import ChartCard from "./components/features/ChartCard/ChartCard";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -51,7 +52,7 @@ function App() {
         <main>
           <section className="pagePanel">
             <h2>Diagnosis History</h2>
-            <div style={{ margin: "40px 0 20px" }}></div>
+            <ChartCard activePatient={activePatient} />
             <div className="flex_between gap20">
               <VitalCard
                 activePatient={activePatient}

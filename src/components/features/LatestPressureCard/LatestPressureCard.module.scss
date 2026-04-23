@@ -1,0 +1,32 @@
+.pressureIcon {
+  margin-right: 4px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+
+  &.systolic {
+    background: #e66fd2;
+  }
+
+  &.diastolic {
+    background: #8c6fe6;
+  }
+}
+
+.pressureItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  &:first-child {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #cbc8d4;
+  }
+}
+
+.pressureValue {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+}

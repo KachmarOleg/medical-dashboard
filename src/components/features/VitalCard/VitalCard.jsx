@@ -1,3 +1,4 @@
+import LevelChecker from "../LevelChecker/LevelChecker";
 import classes from "./VitalCard.module.scss";
 
 export default function VitalCard({
@@ -17,7 +18,7 @@ export default function VitalCard({
 
   return (
     <div
-      className={`${classes.vitalCard} pagePanel flex_column`}
+      className={`${classes.vitalCard} flex_column`}
       style={{ background: cardColor }}
     >
       <figure className={classes.vitalIcon}>
@@ -30,34 +31,10 @@ export default function VitalCard({
         {activePatient ? `${diagnosticType.value} ${vitalUnit}` : "N/A"}
       </p>
 
-      <p className="flex_between gap8">
-        {activePatient
-          ? diagnosticType.levels === "Higher than Average" && (
-              <figure>
-                <img
-                  src="/images/ArrowUp.svg"
-                  alt={`${diagnosticType.levels} icon`}
-                  width={10}
-                  height={5}
-                />
-              </figure>
-            )
-          : null}
-        {activePatient
-          ? diagnosticType.levels === "Lower than Average" && (
-              <figure>
-                <img
-                  src="/images/ArrowDown.svg"
-                  alt={`${diagnosticType.levels} icon`}
-                  width={10}
-                  height={5}
-                />
-              </figure>
-            )
-          : null}
-
-        {activePatient ? diagnosticType.levels : "N/A"}
-      </p>
+      <LevelChecker
+        diagnosticType={diagnosticType}
+        activePatient={activePatient}
+      />
     </div>
   );
 }
