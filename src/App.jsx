@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./styles/App.css";
 import Header from "./components/layout/Header/Header";
 import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 import PatientCard from "./components/features/PatientCard/PatientCard";
