@@ -66,7 +66,6 @@ body {
   }
 }
 
-/* 1-а дитина */
 .container > :nth-child(1) {
   @media screen and (max-width: 1279px) and (min-width: 576px) {
     grid-area: first;
@@ -76,7 +75,6 @@ body {
   }
 }
 
-/* 2-а дитина */
 .container > :nth-child(2) {
   @media screen and (max-width: 1279px) and (min-width: 576px) {
     grid-area: second;
@@ -86,7 +84,6 @@ body {
   }
 }
 
-/* 3-я дитина */
 .container > :nth-child(3) {
   @media screen and (max-width: 1279px) and (min-width: 576px) {
     grid-area: third;
