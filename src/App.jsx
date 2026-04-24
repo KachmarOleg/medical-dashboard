@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Header from "./components/layout/Header/Header";
+import { getPatients } from "./api/patients";
 import PatientsPanel from "./components/features/PatientsPanel/PatientsPanel";
 import PatientCard from "./components/features/PatientCard/PatientCard";
 import LabResults from "./components/features/LabResults/LabResults";
@@ -11,30 +12,17 @@ function App() {
   const [patients, setPatients] = useState([]);
   const [activePatient, setActivePatient] = useState(false);
 
-  let username = "coalition";
-  let password = "skills-test";
-  let auth = btoa(`${username}:${password}`);
-
   useEffect(() => {
-    async function getPatients() {
-      const patientsResponse = await fetch(
-        "https://fedskillstest.coalitiontechnologies.workers.dev",
-        {
-          headers: {
-            Authorization: `Basic ${auth}`,
-          },
-        },
-      );
-      const patientsJSON = await patientsResponse.json();
-      setPatients(patientsJSON);
-      console.log(patientsJSON);
+    async function loadPatients() {
+      const data = await getPatients();
+      setPatients(data);
     }
 
-    getPatients();
+    loadPatients();
   }, []);
 
   function handlePatientClick(patientName) {
-    setActivePatient(patients.find((patient) => patient.name === patientName));
+    setActivePatient(patients.find((p) => p.name === patientName));
   }
 
   return (
