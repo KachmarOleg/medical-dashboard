@@ -53,6 +53,47 @@ body {
   gap: 32px;
   max-width: 1600px;
   margin: 0 auto;
+
+  @media screen and (max-width: 1279px) and (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "first third"
+      "second second";
+  }
+  @media screen and (max-width: 575px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 1-а дитина */
+.container > :nth-child(1) {
+  @media screen and (max-width: 1279px) and (min-width: 576px) {
+    grid-area: first;
+  }
+  @media screen and (max-width: 575px) {
+    order: 3;
+  }
+}
+
+/* 2-а дитина */
+.container > :nth-child(2) {
+  @media screen and (max-width: 1279px) and (min-width: 576px) {
+    grid-area: second;
+  }
+  @media screen and (max-width: 575px) {
+    order: 2;
+  }
+}
+
+/* 3-я дитина */
+.container > :nth-child(3) {
+  @media screen and (max-width: 1279px) and (min-width: 576px) {
+    grid-area: third;
+  }
+  @media screen and (max-width: 575px) {
+    order: 1;
+  }
 }
 
 h2,
@@ -138,10 +179,6 @@ figure {
 
 .gap8 {
   gap: 8px;
-}
-
-.gap20 {
-  gap: 20px;
 }
 
 /* 

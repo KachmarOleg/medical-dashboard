@@ -8,6 +8,7 @@ import DiagnosticList from "./components/features/DiagnosticList/DiagnosticList"
 import VitalCard from "./components/features/VitalCard/VitalCard";
 import ChartCard from "./components/features/ChartCard/ChartCard";
 import { defaultUser } from "./data/defaultUser";
+import VitalCards from "./components/features/VitalCards/VitalCards";
 
 function App() {
   const [patients, setPatients] = useState([]);
@@ -41,29 +42,7 @@ function App() {
           <section className="pagePanel">
             <h2>Diagnosis History</h2>
             <ChartCard activePatient={activePatient} />
-            <div className="flex_between gap20">
-              <VitalCard
-                activePatient={activePatient}
-                type="respiratory_rate"
-                cardColor="#E0F3FA"
-                vitalUnit="bpm"
-                icon="/images/respiratory-rate.svg"
-              />
-              <VitalCard
-                activePatient={activePatient}
-                type="temperature"
-                cardColor="#FFE6E9"
-                vitalUnit="°F"
-                icon="/images/temperature.svg"
-              />
-              <VitalCard
-                activePatient={activePatient}
-                type="heart_rate"
-                cardColor="#FFE6F1"
-                vitalUnit="bpm"
-                icon="/images/heart-rate.svg"
-              />
-            </div>
+            <VitalCards activePatient={activePatient} />
           </section>
 
           <DiagnosticList activePatient={activePatient} />

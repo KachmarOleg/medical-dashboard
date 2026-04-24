@@ -4,6 +4,7 @@
 
 .diagnosticTable {
   margin-top: 40px;
+  overflow-x: auto;
 }
 
 .tContainer {
@@ -17,11 +18,14 @@
   padding: 15px 16px;
   background-color: #f6f7f8;
   border-radius: 24px;
+  min-width: 500px;
 }
 
 .tBody {
+  min-width: 500px;
   max-height: 21vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .tRow {

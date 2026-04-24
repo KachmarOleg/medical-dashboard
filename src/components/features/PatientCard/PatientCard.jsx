@@ -7,15 +7,17 @@ export default function PatientCard({ activePatient }) {
     <div className={`${classes.patientCard} pagePanel`}>
       <div className="flex_column_center">
         {activePatient && (
-          <Avatar
-            imgSrc={
-              activePatient
-                ? activePatient.profile_picture
-                : "/images/patient-profile-pic.png"
-            }
-            width={200}
-            height={200}
-          />
+          <figure className={classes.patientImage}>
+            <Avatar
+              imgSrc={
+                activePatient
+                  ? activePatient.profile_picture
+                  : "/images/patient-profile-pic.png"
+              }
+              width={200}
+              height={200}
+            />
+          </figure>
         )}
         <h2 className={classes.patientName}>
           {activePatient ? activePatient.name : "Select a patient"}

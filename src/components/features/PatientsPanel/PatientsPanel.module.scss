@@ -13,8 +13,13 @@
   background-color: #ffffff;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  max-height: calc(100vh - 90px);
   overflow: auto;
+  @media screen and (min-width: 576px) {
+    max-height: calc(100vh - 90px);
+  }
+  @media screen and (max-width: 575px) {
+    max-height: 50vh;
+  }
 
   button {
     text-decoration: none;
