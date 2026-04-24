@@ -14,8 +14,11 @@
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   overflow: auto;
-  @media screen and (min-width: 576px) {
+  @media screen and (min-width: 1280px) {
     max-height: calc(100vh - 90px);
+  }
+  @media screen and (min-width: 576px) and (max-width: 1279px) {
+    max-height: 936px;
   }
   @media screen and (max-width: 575px) {
     max-height: 50dvh;
