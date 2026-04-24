@@ -7,10 +7,11 @@ import LabResults from "./components/features/LabResults/LabResults";
 import DiagnosticList from "./components/features/DiagnosticList/DiagnosticList";
 import VitalCard from "./components/features/VitalCard/VitalCard";
 import ChartCard from "./components/features/ChartCard/ChartCard";
+import { defaultUser } from "./data/defaultUser";
 
 function App() {
   const [patients, setPatients] = useState([]);
-  const [activePatient, setActivePatient] = useState(false);
+  const [activePatient, setActivePatient] = useState(defaultUser);
 
   useEffect(() => {
     async function loadPatients() {
