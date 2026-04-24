@@ -108,16 +108,19 @@ export default function LineChart({ activePatient }) {
     <div>
       <div className={`${classes.chartHeader} flex_between`}>
         <h3>Blood Pressure</h3>
-        <select
-          name="period"
-          id="period"
-          value={period}
-          onChange={(e) => setPeriod(Number(e.target.value))}
-        >
-          <option value={6}>6 months</option>
-          <option value={12}>12 months</option>
-          <option value={24}>24 months</option>
-        </select>
+
+        <div className={classes.selectWrapper}>
+          <select
+            name="period"
+            id="period"
+            value={period}
+            onChange={(e) => setPeriod(Number(e.target.value))}
+          >
+            <option value={6}>Last 6 months</option>
+            <option value={12}>Last 12 months</option>
+            <option value={24}>Last 24 months</option>
+          </select>
+        </div>
       </div>
 
       <Line data={data} options={options} />
