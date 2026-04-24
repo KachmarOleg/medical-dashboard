@@ -1,7 +1,6 @@
 import classes from "./LabResults.module.scss";
 
 export default function LabResults({ activePatient }) {
-  console.log(activePatient);
   return (
     <div className="pagePanel">
       <h2>Lab Results</h2>

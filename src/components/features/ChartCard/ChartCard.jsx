@@ -5,7 +5,6 @@ import classes from "./ChartCard.module.scss";
 import LineChart from "../LineChart/LineChart";
 
 export default function ChartCard({ activePatient }) {
-  console.log(activePatient);
   return (
     <div className={`${classes.chartCard}`}>
       <LineChart activePatient={activePatient} />
