@@ -1,11 +1,45 @@
+/* Desktop: centered nav */
 .mainMenu {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  @media screen and (max-width: 1024px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 260px;
+    height: 100dvh;
+    background-color: #fff;
+    padding: 36px 24px 32px;
+    z-index: 100;
+
+    translate: -100% 0;
+    transition: translate 0.3s ease;
+
+    /* Visible state */
+    &__open {
+      translate: 0 0;
+    }
+  }
 }
 
 .mainMenuList {
   column-gap: 40px;
+
+  @media screen and (max-width: 1279px) {
+    column-gap: 20px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+  }
 
   li {
     list-style: none;
@@ -20,6 +54,15 @@
       line-height: 19px;
       color: #072635;
       text-decoration: inherit;
+
+      @media screen and (max-width: 1024px) {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 11px 16px;
+        border-radius: 41px;
+        transition: background-color 0.2s ease;
+      }
+
       &.is_active {
         padding: 11px 16px;
         background-color: #01f0d0;
@@ -30,5 +73,72 @@
         display: flex;
       }
     }
+  }
+}
+
+.burgerBtn {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    right: 145px;
+    z-index: 110;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #072635;
+      border-radius: 2px;
+      transform-origin: center;
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+    }
+
+    &__open {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(7, 38, 53, 0.4);
+    z-index: 90;
+    animation: fadeIn 0.3s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

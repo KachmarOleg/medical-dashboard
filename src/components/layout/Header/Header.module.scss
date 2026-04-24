@@ -7,4 +7,8 @@
   padding: 12px 32px;
   background-color: #ffffff;
   border-radius: 70px;
+
+  @media screen and (max-width: 1279px) {
+    padding: 12px 20px;
+  }
 }
